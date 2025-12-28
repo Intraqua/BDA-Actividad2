@@ -1,0 +1,93 @@
+# ============================================
+# ACTIVIDAD 2 - FASE 6: NOSQL (VERSION SIMPLIFICADA)
+# Entorno MongoDB para integración híbrida
+# Sistema de Marketplace Digital
+# Bases de Datos Avanzadas - UNIR
+# Autor: David Valbuena Segura
+# ============================================
+# Esta versión NO ejecuta scripts automáticamente.
+# Las colecciones se crean manualmente desde Mongo Express.
+# Ideal para aprendizaje y documentación paso a paso.
+# ============================================
+
+name: marketplace-mongodb-simple
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb-marketplace-simple
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data_simple:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express-marketplace-simple
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: admin123
+      ME_CONFIG_MONGODB_URL: mongodb://admin:admin123@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: admin
+      ME_CONFIG_BASICAUTH_PASSWORD: admin123
+    ports:
+      - '8081:8081'
+    depends_on:
+      mongodb:
+        condition: service_healthy
+
+volumes:
+  mongodb_data_simple:
+
+
+# ============================================
+# COMANDOS DE GESTIÓN
+# ============================================
+#
+# Levantar contenedor:
+#   docker-compose -f docker-compose-mongodb-simple.yml up -d
+#
+# Ver estado:
+#   docker-compose -f docker-compose-mongodb-simple.yml ps
+#
+# Ver logs:
+#   docker-compose -f docker-compose-mongodb-simple.yml logs -f
+#
+# Detener contenedor:
+#   docker-compose -f docker-compose-mongodb-simple.yml down
+#
+# Eliminar contenedor y datos:
+#   docker-compose -f docker-compose-mongodb-simple.yml down -v
+#
+# ============================================
+# CREDENCIALES DE ACCESO
+# ============================================
+#
+# MongoDB:
+#   Host: localhost
+#   Puerto: 27017
+#   Usuario: admin
+#   Password: admin123
+#
+# Mongo Express (interfaz web):
+#   URL: http://localhost:8081
+#   Usuario: admin
+#   Password: admin123
+#
+# ============================================
+# PASOS SIGUIENTES
+# ============================================
+#
+# 1. Acceder a Mongo Express: http://localhost:8081
+# 2. Crear base de datos: marketplace_nosql
+# 3. Ejecutar comandos de fase6_setup_manual.js
+#
+# ============================================

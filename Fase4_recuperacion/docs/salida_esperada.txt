@@ -1,0 +1,307 @@
+-- =====================================================
+-- SALIDA ESPERADA: fase4_recuperacion.sql
+-- Ejecutar con: docker exec -i marketplace-postgres psql -U postgres -d marketplace_indices < sql/fase4_recuperacion.sql
+-- =====================================================
+
+You are now connected to database "marketplace_indices" as user "postgres".
+
+         fase          
+-----------------------
+ === FASE 4: RECUPERACION ===
+
+            seccion            
+-------------------------------
+ === CONFIGURACION WAL ACTUAL ===
+
+            name             |  setting   | unit |                  short_desc                   
+-----------------------------+------------+------+-----------------------------------------------
+ archive_mode                | off        |      | Allows archiving of WAL files using archive_command
+ checkpoint_completion_target| 0.9        |      | Time spent flushing dirty buffers during checkpoint
+ checkpoint_timeout          | 300        | s    | Sets the maximum time between automatic WAL checkpoints
+ max_wal_size                | 1024       | MB   | Sets the WAL size that triggers a checkpoint
+ min_wal_size                | 80         | MB   | Sets the minimum size to shrink the WAL to
+ wal_buffers                 | 512        | 8kB  | Sets the number of disk-page buffers in shared memory for WAL
+ wal_level                   | replica    |      | Sets the level of information written to the WAL
+
+                seccion                
+---------------------------------------
+ === CICLO DE VIDA DE TRANSACCION ===
+
+DROP TABLE
+CREATE TABLE
+
+CREATE FUNCTION
+
+            info             
+-----------------------------
+ Demostracion: Ciclo de vida de transaccion
+
+ lsn_antes_transaccion 
+-----------------------
+ 0/16B5A48
+
+BEGIN
+COMMIT
+
+ lsn_despues_transaccion 
+-------------------------
+ 0/16B5C20
+
+                  info                  
+----------------------------------------
+ Registro del ciclo de transaccion
+
+  xid   | operacion |  tabla_afectada  |  lsn_inicio  |   timestamp_registro   
+--------+-----------+------------------+--------------+------------------------
+ 123456 | UPDATE    | Producto         | 0/16B5B10    | 2025-01-15 10:30:45
+ 123456 | BEGIN     |                  | 0/16B5A48    | 2025-01-15 10:30:45
+
+           seccion           
+-----------------------------
+ === SIMULACION DE FALLO ===
+
+DROP TABLE
+CREATE TABLE
+UPDATE 1
+
+BEGIN
+INSERT 0 1
+UPDATE 1
+COMMIT
+
+              estado_t1               
+--------------------------------------
+ T1 COMMITTED - Si fallo antes de checkpoint, requiere REDO
+
+BEGIN
+INSERT 0 1
+UPDATE 1
+
+                estado_t2                
+-----------------------------------------
+ T2 EN PROGRESO - Simulando fallo antes de COMMIT
+
+ stock_durante_t2 
+------------------
+               94
+
+ROLLBACK
+
+           resultado_recuperacion           
+--------------------------------------------
+ T2 ROLLBACK (simula UNDO automatico tras fallo)
+
+                    info                    
+--------------------------------------------
+ Estado despues de recuperacion simulada
+
+ id_producto | stock_recuperado 
+-------------+------------------
+           1 |               97
+
+              seccion              
+-----------------------------------
+ === DEMOSTRACION UNDO/REDO ===
+
+UPDATE 1
+DROP TABLE
+CREATE TABLE
+
+CREATE FUNCTION
+
+                      info                      
+------------------------------------------------
+ Ejecutando compras con registro de recuperacion
+
+ exito |               mensaje                | stock_final 
+-------+--------------------------------------+-------------
+ t     | Compra registrada con log de recup.  |          95
+
+ exito |               mensaje                | stock_final 
+-------+--------------------------------------+-------------
+ t     | Compra registrada con log de recup.  |          85
+
+ exito |               mensaje                | stock_final 
+-------+--------------------------------------+-------------
+ t     | Compra registrada con log de recup.  |          82
+
+                        info                        
+----------------------------------------------------
+ Log de operaciones (base para UNDO/REDO)
+
+ id | operacion |  valor_undo  |  valor_redo  | aplicado |    lsn    
+----+-----------+--------------+--------------+----------+-----------
+  1 | UPDATE    | stock=100    | stock=95     | t        | 0/16B6A20
+  2 | UPDATE    | stock=95     | stock=85     | t        | 0/16B6B40
+  3 | UPDATE    | stock=85     | stock=82     | t        | 0/16B6C60
+
+                seccion                
+---------------------------------------
+ === CONFIGURACION DE CHECKPOINTS ===
+
+                 info                 
+--------------------------------------
+ Configuracion actual de checkpoints
+
+            name             | setting | unit |              descripcion              
+-----------------------------+---------+------+---------------------------------------
+ checkpoint_completion_target| 0.9     |      | Fraccion del intervalo para completar
+ checkpoint_timeout          | 300     | s    | Intervalo maximo entre checkpoints
+ max_wal_size                | 1024    | MB   | Tamano WAL que fuerza checkpoint
+ min_wal_size                | 80      | MB   | Tamano WAL minimo a mantener
+
+                info                
+------------------------------------
+ Informacion del ultimo checkpoint
+
+ checkpoint_lsn |  redo_lsn  |      checkpoint_time       
+----------------+------------+----------------------------
+ 0/16B4000      | 0/16B4000  | 2025-01-15 10:25:00.123456
+
+                          info                          
+--------------------------------------------------------
+ Estadisticas de checkpoints (desde inicio del servidor)
+
+ checkpoints_timed | checkpoints_req | checkpoint_write_time | checkpoint_sync_time | buffers_checkpoint 
+-------------------+-----------------+-----------------------+----------------------+--------------------
+               125 |              12 |                 45678 |                 1234 |              89012
+
+              info              
+--------------------------------
+ Ejecutando CHECKPOINT manual
+
+CHECKPOINT
+
+         info         
+----------------------
+ Estado post-checkpoint
+
+ nuevo_checkpoint_lsn |      timestamp_checkpoint      
+----------------------+--------------------------------
+ 0/16B7000            | 2025-01-15 10:31:15.654321
+
+               seccion               
+-------------------------------------
+ === POLITICA DE RETENCION WAL ===
+
+              info              
+--------------------------------
+ Configuracion de archivado WAL
+
+      name       | setting |           descripcion           
+-----------------+---------+---------------------------------
+ archive_mode    | off     | Modo de archivado (on/off)
+ archive_command |         | Comando para archivar segmentos
+ archive_timeout | 0       | Forzar archivado tras N segundos
+ wal_level       | replica | Nivel de detalle WAL
+
+DROP TABLE
+CREATE TABLE
+INSERT 0 4
+
+              info              
+--------------------------------
+ Politica de backup implementada
+
+       tipo_backup       |        frecuencia         | retencion 
+-------------------------+---------------------------+-----------
+ Backup Base Completo    | Semanal (Domingo 02:00)   | 4 semanas
+ WAL Archivado           | Continuo                  | 7 dias
+ Backup Logico           | Diario (03:00)            | 7 dias
+ Snapshot Almacenamiento | Cada 6 horas              | 48 horas
+
+           seccion           
+-----------------------------
+ === PROCEDIMIENTO PITR ===
+
+DROP TABLE
+CREATE TABLE
+INSERT 0 7
+
+                info                
+------------------------------------
+ Procedimiento de recuperacion PITR
+
+ paso |          accion           |                comando                 
+------+---------------------------+----------------------------------------
+    1 | Detener PostgreSQL        | pg_ctl stop -D $PGDATA
+    2 | Respaldar datos actuales  | mv $PGDATA $PGDATA.failed
+    3 | Restaurar backup base     | tar -xf backup_base.tar -C $PGDATA
+    4 | Crear recovery.signal     | touch $PGDATA/recovery.signal
+    5 | Configurar recuperacion   | Editar postgresql.conf
+    6 | Iniciar PostgreSQL        | pg_ctl start -D $PGDATA
+    7 | Verificar recuperacion    | SELECT pg_is_in_recovery();
+
+                seccion                
+---------------------------------------
+ === VERIFICACION DE INTEGRIDAD ===
+
+                 info                 
+--------------------------------------
+ Verificacion de integridad de datos
+
+   tabla    | registros 
+------------+-----------
+ Producto   |        50
+ Pedido     |       125
+ Comprobante|       120
+ Cliente    |       100
+
+                     verificacion                     
+------------------------------------------------------
+ Pedidos sin comprobante (integridad referencial)
+
+ pedidos_sin_comprobante 
+-------------------------
+                       0
+
+                 verificacion                 
+----------------------------------------------
+ Productos con stock negativo (anomalia)
+
+ productos_stock_negativo 
+--------------------------
+                        0
+
+           seccion           
+-----------------------------
+ === ESTADISTICAS WAL ===
+
+           info           
+--------------------------
+ Posicion actual en WAL
+
+ wal_lsn_actual | archivo_wal_actual  
+----------------+---------------------
+ 0/16B7520      | 000000010000000000000001
+
+          info          
+------------------------
+ Actividad WAL reciente
+
+ wal_total_mb | segmento_mb 
+--------------+-------------
+        22.87 |          16
+
+                  seccion                  
+-------------------------------------------
+ === RESTAURACION PARA SIGUIENTE FASE ===
+
+UPDATE 3
+
+                    info                    
+--------------------------------------------
+ Resumen de objetos creados en Fase 4
+
+          objeto          |   tipo   |               proposito               
+--------------------------+----------+---------------------------------------
+ log_transacciones        | Tabla    | Registro de ciclo de vida
+ log_undo_redo            | Tabla    | Simulacion de log para recuperacion
+ politica_backup          | Tabla    | Documentacion de politica de respaldos
+ procedimiento_pitr       | Tabla    | Pasos para recuperacion PITR
+ registrar_ciclo_transaccion | Funcion | Registra ciclo de vida transaccional
+ compra_con_log_recuperacion | Funcion | Compra con logging tipo WAL
+
+          resultado          
+-----------------------------
+ === FASE 4 COMPLETADA ===

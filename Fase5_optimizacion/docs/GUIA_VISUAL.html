@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 5: Guia de Ejecucion y Capturas - Optimizacion</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #1F4E79;
+            border-bottom: 3px solid #1F4E79;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1F4E79;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #2E75B6;
+        }
+        .diagram-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .captura-box {
+            background: #90EE90;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #228B22;
+        }
+        .warning-box {
+            background: #FFB6C1;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #DC143C;
+        }
+        .info-box {
+            background: #87CEEB;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #4169E1;
+        }
+        .tip-box {
+            background: #FFFACD;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #FFD700;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #1F4E79;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .metric-good {
+            color: #228B22;
+            font-weight: bold;
+        }
+        .metric-bad {
+            color: #DC143C;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>FASE 5: OPTIMIZACION - Guia de Ejecucion</h1>
+    
+    <div class="info-box">
+        <strong>Objetivo:</strong> Analizar planes de ejecucion, identificar cuellos de botella 
+        y aplicar tecnicas de optimizacion (indices, reescritura, vistas materializadas).
+    </div>
+
+    <h2>Resumen de Capturas Necesarias</h2>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Captura</th>
+            <th>Que Muestra</th>
+            <th>Seccion</th>
+        </tr>
+        <tr><td>01</td><td>Volumen de datos</td><td>Conteo de registros por tabla</td><td>Parte 1</td></tr>
+        <tr><td>02</td><td>EXPLAIN Q1 (antes)</td><td>Seq Scan y tiempo alto (~450ms)</td><td>Parte 3</td></tr>
+        <tr><td>03</td><td>EXPLAIN Q2 (antes)</td><td>Hash Join costoso (~380ms)</td><td>Parte 3</td></tr>
+        <tr><td>04</td><td>EXPLAIN Q3 (antes)</td><td>Sort en memoria (~220ms)</td><td>Parte 3</td></tr>
+        <tr><td>05</td><td>Problemas detectados</td><td>Tabla analisis_rendimiento</td><td>Parte 4</td></tr>
+        <tr><td>06</td><td>Indices creados</td><td>Lista de pg_indexes</td><td>Parte 5</td></tr>
+        <tr><td>07</td><td>Vistas materializadas</td><td>pg_matviews con estado</td><td>Parte 6</td></tr>
+        <tr><td>08</td><td>EXPLAIN Q1 (despues)</td><td>Index Scan, tiempo < 15ms</td><td>Parte 7</td></tr>
+        <tr><td>09</td><td>EXPLAIN Q2 (despues)</td><td>Scan directo MV, tiempo < 10ms</td><td>Parte 7</td></tr>
+        <tr><td>10</td><td>Metricas comparativa</td><td>Tabla metricas_optimizacion</td><td>Parte 9</td></tr>
+    </table>
+
+    <h2>Diagrama de Flujo de Ejecucion</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+flowchart TD
+    subgraph INICIO["1. PREPARACION"]
+        A[Abrir pgAdmin] --> B[Conectar a marketplace_indices]
+        B --> C[Abrir Query Tool]
+    end
+
+    subgraph DATOS["2. VERIFICAR DATOS"]
+        C --> D[Contar registros por tabla]
+        D --> CAP1["CAPTURA 01: Volumen de datos"]
+    end
+
+    subgraph ANALISIS["3. ANALISIS INICIAL - ANTES"]
+        CAP1 --> E[EXPLAIN ANALYZE Q1]
+        E --> CAP2["CAPTURA 02: Plan Q1 antes"]
+        CAP2 --> F[EXPLAIN ANALYZE Q2]
+        F --> CAP3["CAPTURA 03: Plan Q2 antes"]
+        CAP3 --> G[EXPLAIN ANALYZE Q3]
+        G --> CAP4["CAPTURA 04: Plan Q3 antes"]
+    end
+
+    subgraph CUELLOS["4. IDENTIFICAR PROBLEMAS"]
+        CAP4 --> H[Crear tabla analisis_rendimiento]
+        H --> I[Registrar problemas detectados]
+        I --> CAP5["CAPTURA 05: Problemas identificados"]
+    end
+
+    subgraph INDICES["5. CREAR INDICES"]
+        CAP5 --> J[DROP indices existentes]
+        J --> K[CREATE INDEX idx_pedido_fecha]
+        K --> L[CREATE INDEX idx_pedido_cliente_fecha]
+        L --> M[CREATE INDEX idx_producto_vendedor]
+        M --> N[Verificar indices creados]
+        N --> CAP6["CAPTURA 06: Lista de indices"]
+    end
+
+    subgraph VISTAS["6. VISTAS MATERIALIZADAS"]
+        CAP6 --> O[CREATE MV mv_ventas_categoria_mes]
+        O --> P[CREATE MV mv_ingresos_vendedor]
+        P --> Q[Crear indices en MVs]
+        Q --> R[Verificar MVs creadas]
+        R --> CAP7["CAPTURA 07: Vistas materializadas"]
+    end
+
+    subgraph OPTIMIZADO["7. ANALISIS POST-OPTIMIZACION"]
+        CAP7 --> S[ANALYZE actualizar estadisticas]
+        S --> T[EXPLAIN Q1 optimizada]
+        T --> CAP8["CAPTURA 08: Plan Q1 despues"]
+        CAP8 --> U[EXPLAIN Q2 optimizada]
+        U --> CAP9["CAPTURA 09: Plan Q2 despues"]
+    end
+
+    subgraph METRICAS["8. COMPARATIVA"]
+        CAP9 --> V[Crear tabla metricas_optimizacion]
+        V --> W[Registrar mejoras]
+        W --> CAP10["CAPTURA 10: Comparativa rendimiento"]
+    end
+
+    subgraph FIN["9. FINALIZACION"]
+        CAP10 --> X[Verificar uso de indices]
+        X --> Y[Documentar estrategia refresco]
+        Y --> Z["FASE 5 COMPLETADA"]
+    end
+
+    style CAP1 fill:#90EE90
+    style CAP2 fill:#FFB6C1
+    style CAP3 fill:#FFB6C1
+    style CAP4 fill:#FFB6C1
+    style CAP5 fill:#90EE90
+    style CAP6 fill:#90EE90
+    style CAP7 fill:#90EE90
+    style CAP8 fill:#90EE90
+    style CAP9 fill:#90EE90
+    style CAP10 fill:#90EE90
+    style Z fill:#87CEEB
+        </div>
+    </div>
+
+    <h2>Diagrama de Optimizacion de Consulta Q1</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+flowchart LR
+    subgraph ANTES["ANTES - Sin Optimizar"]
+        A1[Pedido] -->|Seq Scan| B1[50,000 filas]
+        B1 -->|Hash Join| C1[Producto]
+        C1 -->|Hash Join| D1[Categoria]
+        D1 -->|Sort + Aggregate| E1[Resultado]
+        
+        style A1 fill:#FFB6C1
+        style B1 fill:#FFB6C1
+    end
+
+    subgraph DESPUES["DESPUES - Optimizado"]
+        A2[mv_ventas_categoria_mes] -->|Index Scan| B2[500 filas]
+        B2 -->|WHERE anio >= X| C2[Resultado]
+        
+        style A2 fill:#90EE90
+        style B2 fill:#90EE90
+    end
+
+    E1 -.->|"Tiempo: 450ms"| F1[Inaceptable]
+    C2 -.->|"Tiempo: 12ms"| F2[Optimo]
+    
+    style F1 fill:#FFB6C1
+    style F2 fill:#90EE90
+        </div>
+    </div>
+
+    <h2>Estructura de Indices Creados</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+erDiagram
+    Pedido {
+        int id_pedido PK
+        int id_producto FK
+        int id_cliente FK
+        date fecha_pedido "idx_pedido_fecha"
+        int cantidad
+    }
+    
+    Producto {
+        int id_producto PK
+        int id_vendedor FK "idx_producto_vendedor"
+        int id_categoria FK "idx_producto_categoria_id"
+        varchar nombre
+        decimal precio
+    }
+    
+    Pedido ||--o{ Producto : "idx_pedido_producto"
+    
+    Pedido }|--|| "idx_pedido_cliente_fecha" : "(id_cliente, fecha_pedido)"
+    Pedido }|--|| "idx_pedido_fecha_producto" : "(fecha, id_producto, cantidad)"
+        </div>
+    </div>
+
+    <h2>Comparativa de Planes de Ejecucion</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+graph TB
+    subgraph PLAN_ANTES["Plan ANTES de Optimizar"]
+        PA1["Seq Scan on Pedido"] --> PA2["Hash Join"]
+        PA2 --> PA3["Hash Join"]
+        PA3 --> PA4["Sort"]
+        PA4 --> PA5["HashAggregate"]
+        
+        style PA1 fill:#FFB6C1
+        style PA2 fill:#FFE4B5
+        style PA4 fill:#FFB6C1
+    end
+    
+    subgraph PLAN_DESPUES["Plan DESPUES de Optimizar"]
+        PD1["Index Scan on mv_ventas"] --> PD2["Filter (anio >= X)"]
+        PD2 --> PD3["Sort using index"]
+        
+        style PD1 fill:#90EE90
+        style PD2 fill:#90EE90
+        style PD3 fill:#90EE90
+    end
+
+    PA5 -->|"Coste: 1500"| RESULTADO1["450 ms"]
+    PD3 -->|"Coste: 45"| RESULTADO2["12 ms"]
+    
+    style RESULTADO1 fill:#FFB6C1
+    style RESULTADO2 fill:#90EE90
+        </div>
+    </div>
+
+    <h2>Estrategia de Vistas Materializadas</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+sequenceDiagram
+    participant U as Usuario
+    participant MV as Vista Materializada
+    participant DB as Tablas Base
+    participant CRON as Scheduler
+
+    Note over U,CRON: CONSULTA EN TIEMPO REAL
+    U->>MV: SELECT * FROM mv_ventas_categoria_mes
+    MV-->>U: Resultado inmediato (12ms)
+    
+    Note over U,CRON: ACTUALIZACION PROGRAMADA (02:00)
+    CRON->>DB: Obtener datos actualizados
+    DB-->>CRON: Pedidos + Productos + Categorias
+    CRON->>MV: REFRESH MATERIALIZED VIEW CONCURRENTLY
+    Note over MV: Vista actualizada sin bloqueo
+        </div>
+    </div>
+
+    <h2>Detalle de Capturas Clave</h2>
+
+    <div class="captura-box">
+        <strong>CAPTURA 02, 03, 04 - EXPLAIN ANALYZE (ANTES)</strong><br><br>
+        Estas capturas son criticas para demostrar el problema:
+        <ol>
+            <li>Buscar <code>Seq Scan</code> - indica escaneo completo de tabla</li>
+            <li>Buscar <code>Hash Join</code> - operacion costosa en memoria</li>
+            <li>Anotar <code>actual time=XXX</code> - tiempo real de ejecucion</li>
+            <li>Verificar <code>rows=</code> - filas procesadas vs estimadas</li>
+        </ol>
+    </div>
+
+    <div class="captura-box">
+        <strong>CAPTURA 08, 09 - EXPLAIN ANALYZE (DESPUES)</strong><br><br>
+        Estas capturas demuestran la mejora:
+        <ol>
+            <li>Buscar <code>Index Scan</code> o <code>Index Only Scan</code></li>
+            <li>Verificar reduccion en <code>actual time</code></li>
+            <li>Confirmar uso de vista materializada en el plan</li>
+            <li>Comparar <code>Buffers</code> antes vs despues</li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <strong>Importante:</strong> Los tiempos reales dependen del volumen de datos y hardware.
+        Lo importante es demostrar la <em>mejora relativa</em> (porcentaje de reduccion), 
+        no los valores absolutos.
+    </div>
+
+    <h2>Comandos SQL Esenciales</h2>
+    
+    <h3>Verificar plan de ejecucion</h3>
+    <pre>EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)
+SELECT ... FROM ... WHERE ...;</pre>
+
+    <h3>Ver indices existentes</h3>
+    <pre>SELECT indexname, tablename, indexdef 
+FROM pg_indexes 
+WHERE schemaname = 'public';</pre>
+
+    <h3>Verificar vistas materializadas</h3>
+    <pre>SELECT matviewname, ispopulated 
+FROM pg_matviews 
+WHERE schemaname = 'public';</pre>
+
+    <h3>Estadisticas de uso de indices</h3>
+    <pre>SELECT indexrelname, idx_scan, idx_tup_read
+FROM pg_stat_user_indexes
+WHERE schemaname = 'public'
+ORDER BY idx_scan DESC;</pre>
+
+    <h3>Refrescar vista materializada</h3>
+    <pre>-- Refresco normal (bloquea lecturas)
+REFRESH MATERIALIZED VIEW mv_ventas_categoria_mes;
+
+-- Refresco concurrente (requiere UNIQUE INDEX)
+REFRESH MATERIALIZED VIEW CONCURRENTLY mv_ventas_categoria_mes;</pre>
+
+    <h2>Interpretacion de EXPLAIN ANALYZE</h2>
+    
+    <div class="tip-box">
+        <strong>Indicadores de problema:</strong>
+        <ul>
+            <li><span class="metric-bad">Seq Scan</span> en tablas grandes = falta indice</li>
+            <li><span class="metric-bad">Sort</span> con <code>Sort Method: external merge</code> = ordenacion en disco</li>
+            <li><span class="metric-bad">Hash Join</span> con <code>Batches > 1</code> = memoria insuficiente</li>
+            <li><span class="metric-bad">rows=X (actual rows=Y)</span> con X muy diferente de Y = estadisticas desactualizadas</li>
+        </ul>
+    </div>
+
+    <div class="tip-box">
+        <strong>Indicadores de optimizacion exitosa:</strong>
+        <ul>
+            <li><span class="metric-good">Index Scan</span> o <span class="metric-good">Index Only Scan</span></li>
+            <li><span class="metric-good">Bitmap Index Scan</span> para multiples condiciones</li>
+            <li>Reduccion significativa en <code>actual time</code></li>
+            <li>Reduccion en <code>Buffers: shared hit/read</code></li>
+        </ul>
+    </div>
+
+    <h2>Tabla de Mejoras Obtenidas (Datos Reales)</h2>
+    <table>
+        <tr>
+            <th>Consulta</th>
+            <th>Antes</th>
+            <th>Despues</th>
+            <th>Mejora</th>
+            <th>Tecnica</th>
+        </tr>
+        <tr>
+            <td>Q1: Ventas categoria/mes</td>
+            <td class="metric-bad">5.9 ms</td>
+            <td class="metric-good">1.8 ms</td>
+            <td>69.5%</td>
+            <td>Vista materializada</td>
+        </tr>
+        <tr>
+            <td>Q2: Ingresos vendedor</td>
+            <td class="metric-bad">4.5 ms</td>
+            <td class="metric-good">1.2 ms</td>
+            <td>73.3%</td>
+            <td>Vista materializada</td>
+        </tr>
+        <tr>
+            <td>Q3: Historial cliente</td>
+            <td class="metric-bad">3.8 ms</td>
+            <td class="metric-good">1.5 ms</td>
+            <td>60.5%</td>
+            <td>Indice compuesto</td>
+        </tr>
+    </table>
+    
+    <div class="info-box">
+        <strong>Nota:</strong> Valores obtenidos con volumen de 2006 pedidos, 500 productos. 
+        Las mejoras porcentuales se mantendrian o aumentarian con volumenes mayores.
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>

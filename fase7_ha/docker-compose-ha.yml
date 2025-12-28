@@ -1,0 +1,195 @@
+# =============================================================================
+# FASE 7 - ALTA DISPONIBILIDAD CON FAILOVER AUTOMATICO
+# Sistema Marketplace Digital - Actividad 2
+# Autor: David Valbuena Segura
+# =============================================================================
+# Arquitectura:
+#   - pg-primary: Nodo principal (lectura/escritura)
+#   - pg-standby: Nodo réplica (solo lectura, promocionable)
+#   - failover-manager: Monitoriza y ejecuta failover automático
+#   - pgadmin: Interfaz de administración
+# =============================================================================
+
+name: marketplace-ha-failover
+
+services:
+  # ---------------------------------------------------------------------------
+  # NODO PRIMARIO (PRIMARY) - Lectura/Escritura
+  # ---------------------------------------------------------------------------
+  pg-primary:
+    image: bitnami/postgresql:latest
+    container_name: ha_primary_node
+    environment:
+      # Credenciales
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_PASSWORD=postgres123
+      - POSTGRESQL_DATABASE=marketplace_ha
+      # Configuración de replicación (MASTER)
+      - POSTGRESQL_REPLICATION_MODE=master
+      - POSTGRESQL_REPLICATION_USER=replicator
+      - POSTGRESQL_REPLICATION_PASSWORD=replicator123
+      # Replicación SINCRONA para RPO=0
+      - POSTGRESQL_SYNCHRONOUS_COMMIT_MODE=on
+      - POSTGRESQL_NUM_SYNCHRONOUS_REPLICAS=1
+      # Parámetros WAL
+      - POSTGRESQL_WAL_LEVEL=replica
+      - POSTGRESQL_MAX_WAL_SENDERS=10
+      - POSTGRESQL_MAX_REPLICATION_SLOTS=10
+      - POSTGRESQL_HOT_STANDBY=on
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_primary_data:/bitnami/postgresql
+    networks:
+      - marketplace_ha_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d marketplace_ha"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+
+  # ---------------------------------------------------------------------------
+  # NODO STANDBY (REPLICA) - Solo Lectura / Promocionable
+  # ---------------------------------------------------------------------------
+  pg-standby:
+    image: bitnami/postgresql:latest
+    container_name: ha_standby_node
+    depends_on:
+      pg-primary:
+        condition: service_healthy
+    environment:
+      # Configuración de replicación (SLAVE)
+      - POSTGRESQL_REPLICATION_MODE=slave
+      - POSTGRESQL_REPLICATION_USER=replicator
+      - POSTGRESQL_REPLICATION_PASSWORD=replicator123
+      - POSTGRESQL_MASTER_HOST=pg-primary
+      - POSTGRESQL_MASTER_PORT_NUMBER=5432
+      - POSTGRESQL_PASSWORD=postgres123
+      # Hot standby permite consultas de lectura
+      - POSTGRESQL_HOT_STANDBY=on
+    ports:
+      - "5433:5432"
+    volumes:
+      - pg_standby_data:/bitnami/postgresql
+    networks:
+      - marketplace_ha_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+
+  # ---------------------------------------------------------------------------
+  # FAILOVER MANAGER - Monitorización y Failover Automático
+  # ---------------------------------------------------------------------------
+  failover-manager:
+    image: python:3.11-slim
+    container_name: ha_failover_manager
+    depends_on:
+      pg-primary:
+        condition: service_healthy
+      pg-standby:
+        condition: service_healthy
+    environment:
+      - PRIMARY_HOST=pg-primary
+      - STANDBY_HOST=pg-standby
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres123
+      - DB_NAME=marketplace_ha
+      - CHECK_INTERVAL=5
+      - FAILOVER_THRESHOLD=3
+    volumes:
+      - ./scripts/failover_manager.py:/app/failover_manager.py:ro
+      - failover_logs:/var/log/failover
+    networks:
+      - marketplace_ha_net
+    command: >
+      bash -c "
+        pip install psycopg2-binary --quiet &&
+        python /app/failover_manager.py
+      "
+    restart: unless-stopped
+
+  # ---------------------------------------------------------------------------
+  # PGADMIN - Interfaz de Administración
+  # ---------------------------------------------------------------------------
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: ha_pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin123
+    ports:
+      - "5050:80"
+    networks:
+      - marketplace_ha_net
+    depends_on:
+      - pg-primary
+      - pg-standby
+
+# =============================================================================
+# VOLUMENES PERSISTENTES
+# =============================================================================
+volumes:
+  pg_primary_data:
+    name: ha_primary_data
+  pg_standby_data:
+    name: ha_standby_data
+  failover_logs:
+    name: ha_failover_logs
+
+# =============================================================================
+# RED
+# =============================================================================
+networks:
+  marketplace_ha_net:
+    name: ha_cluster_network
+    driver: bridge
+
+
+
+
+# =============================================================================
+# COMANDOS DE GESTION DEL CLUSTER
+# =============================================================================
+#
+# LEVANTAR EL CLUSTER:
+#   docker-compose -f docker-compose-ha.yml up -d
+#
+# VERIFICAR ESTADO DE CONTENEDORES:
+#   docker-compose -f docker-compose-ha.yml ps
+#
+# VER LOGS DE TODOS LOS SERVICIOS:
+#   docker-compose -f docker-compose-ha.yml logs
+#
+# VER LOGS EN TIEMPO REAL:
+#   docker-compose -f docker-compose-ha.yml logs -f
+#
+# VER LOGS DE UN SERVICIO ESPECIFICO:
+#   docker logs ha_primary_node
+#   docker logs ha_standby_node
+#   docker logs ha_failover_manager
+#   docker logs ha_pgadmin
+#
+# PARAR EL CLUSTER (mantiene datos):
+#   docker-compose -f docker-compose-ha.yml stop
+#
+# INICIAR CLUSTER PARADO:
+#   docker-compose -f docker-compose-ha.yml start
+#
+# PARAR Y ELIMINAR CONTENEDORES (mantiene datos):
+#   docker-compose -f docker-compose-ha.yml down
+#
+# ELIMINAR TODO (contenedores + volumenes + datos):
+#   docker-compose -f docker-compose-ha.yml down -v
+#
+# REINICIAR UN SERVICIO:
+#   docker-compose -f docker-compose-ha.yml restart pg-primary
+#
+# SIMULAR CAIDA DEL PRIMARY (para prueba de failover):
+#   docker stop ha_primary_node
+#
+# =============================================================================

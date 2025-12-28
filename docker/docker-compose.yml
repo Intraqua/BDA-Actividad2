@@ -1,0 +1,58 @@
+# ============================================
+# ACTIVIDAD 2 - ENTORNO POSTGRESQL BASE
+# Sistema de Marketplace Digital
+# Bases de Datos Avanzadas - UNIPRO
+# Autor: David Valbuena Segura
+# ============================================
+# Este docker-compose se usa para las Fases 1-5
+# Las Fases 6 y 7 tienen sus propios docker-compose
+# ============================================
+
+name: marketplace-postgres
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: marketplace-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      POSTGRES_DB: marketplace_indices
+    ports:
+      - '5434:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./shared:/shared
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: marketplace-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - '5050:80'
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
+
+# Para levantar el contenedor: docker-compose up -d
+# Para detener: docker-compose down
+# Para eliminar datos: docker-compose down -v
+
+# Conexión desde Windows:
+#   Host: localhost
+#   Puerto: 5434
+#   Usuario: postgres
+#   Password: postgres123

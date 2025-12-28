@@ -1,0 +1,500 @@
+{"producto_id":4,"nombre":"Versión Plus Alpha 4","categoria":"Moda","precio":57.18,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":5,"nombre":"Serie Advance Alpha 5","categoria":"Smartphones","precio":57.88,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":6,"nombre":"Edición Special Alpha 6","categoria":"Tablets","precio":45.01,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":7,"nombre":"Gama Elite Alpha 7","categoria":"Auriculares","precio":64.53,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":8,"nombre":"Línea Classic Alpha 8","categoria":"Portátiles","precio":94.37,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":9,"nombre":"Producto Premium Beta 9","categoria":"Componentes PC","precio":88.25,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":10,"nombre":"Artículo Pro Beta 10","categoria":"Periféricos","precio":102.91,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":11,"nombre":"Item Deluxe Beta 11","categoria":"Cocina","precio":69.37,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":12,"nombre":"Modelo Básico Beta 12","categoria":"Decoración","precio":88.97,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":13,"nombre":"Versión Plus Beta 13","categoria":"Fitness","precio":121.15,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":14,"nombre":"Serie Advance Beta 14","categoria":"Running","precio":121.13,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":15,"nombre":"Edición Special Beta 15","categoria":"Electrónica","precio":85.35,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":16,"nombre":"Gama Elite Beta 16","categoria":"Informática","precio":96.49,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":17,"nombre":"Línea Classic Beta 17","categoria":"Hogar","precio":132.26,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":18,"nombre":"Producto Premium Gamma 18","categoria":"Deportes","precio":111.89,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":19,"nombre":"Artículo Pro Gamma 19","categoria":"Moda","precio":117.71,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":20,"nombre":"Item Deluxe Gamma 20","categoria":"Smartphones","precio":130.41,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":21,"nombre":"Modelo Básico Gamma 21","categoria":"Tablets","precio":120.22,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":22,"nombre":"Versión Plus Gamma 22","categoria":"Auriculares","precio":121.88,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":23,"nombre":"Serie Advance Gamma 23","categoria":"Portátiles","precio":143.08,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":24,"nombre":"Edición Special Gamma 24","categoria":"Componentes PC","precio":156.81,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":25,"nombre":"Gama Elite Gamma 25","categoria":"Periféricos","precio":140.71,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":26,"nombre":"Línea Classic Gamma 26","categoria":"Cocina","precio":143.42,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":27,"nombre":"Producto Premium Delta 27","categoria":"Decoración","precio":159.69,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":28,"nombre":"Artículo Pro Delta 28","categoria":"Fitness","precio":169.07,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":29,"nombre":"Item Deluxe Delta 29","categoria":"Running","precio":158.21,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":30,"nombre":"Modelo Básico Delta 30","categoria":"Electrónica","precio":186.54,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":31,"nombre":"Versión Plus Delta 31","categoria":"Informática","precio":187.58,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":32,"nombre":"Serie Advance Delta 32","categoria":"Hogar","precio":193.13,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":33,"nombre":"Edición Special Delta 33","categoria":"Deportes","precio":216.14,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":34,"nombre":"Gama Elite Delta 34","categoria":"Moda","precio":212.10,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":35,"nombre":"Línea Classic Delta 35","categoria":"Smartphones","precio":216.51,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":36,"nombre":"Producto Premium Epsilon 36","categoria":"Tablets","precio":197.46,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":37,"nombre":"Artículo Pro Epsilon 37","categoria":"Auriculares","precio":197.47,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":38,"nombre":"Item Deluxe Epsilon 38","categoria":"Portátiles","precio":221.93,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":39,"nombre":"Modelo Básico Epsilon 39","categoria":"Componentes PC","precio":206.28,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":40,"nombre":"Versión Plus Epsilon 40","categoria":"Periféricos","precio":258.64,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":41,"nombre":"Serie Advance Epsilon 41","categoria":"Cocina","precio":227.81,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":42,"nombre":"Edición Special Epsilon 42","categoria":"Decoración","precio":267.76,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":43,"nombre":"Gama Elite Epsilon 43","categoria":"Fitness","precio":225.24,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":44,"nombre":"Línea Classic Epsilon 44","categoria":"Running","precio":251.90,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":45,"nombre":"Producto Premium Omega 45","categoria":"Electrónica","precio":240.49,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":46,"nombre":"Artículo Pro Omega 46","categoria":"Informática","precio":245.89,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":47,"nombre":"Item Deluxe Omega 47","categoria":"Hogar","precio":252.04,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":48,"nombre":"Modelo Básico Omega 48","categoria":"Deportes","precio":284.72,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":49,"nombre":"Versión Plus Omega 49","categoria":"Moda","precio":285.26,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":50,"nombre":"Serie Advance Omega 50","categoria":"Smartphones","precio":271.66,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":51,"nombre":"Edición Special Omega 51","categoria":"Tablets","precio":280.87,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":52,"nombre":"Gama Elite Omega 52","categoria":"Auriculares","precio":290.83,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":53,"nombre":"Línea Classic Omega 53","categoria":"Portátiles","precio":286.23,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":54,"nombre":"Producto Premium Sigma 54","categoria":"Componentes PC","precio":294.94,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":55,"nombre":"Artículo Pro Sigma 55","categoria":"Periféricos","precio":299.55,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":56,"nombre":"Item Deluxe Sigma 56","categoria":"Cocina","precio":291.77,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":57,"nombre":"Modelo Básico Sigma 57","categoria":"Decoración","precio":341.53,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":58,"nombre":"Versión Plus Sigma 58","categoria":"Fitness","precio":339.02,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":59,"nombre":"Serie Advance Sigma 59","categoria":"Running","precio":328.52,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":60,"nombre":"Edición Special Sigma 60","categoria":"Electrónica","precio":357.21,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":61,"nombre":"Gama Elite Sigma 61","categoria":"Informática","precio":333.61,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":62,"nombre":"Línea Classic Sigma 62","categoria":"Hogar","precio":329.70,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":63,"nombre":"Producto Premium Theta 63","categoria":"Deportes","precio":357.85,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":64,"nombre":"Artículo Pro Theta 64","categoria":"Moda","precio":354.92,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":65,"nombre":"Item Deluxe Theta 65","categoria":"Smartphones","precio":357.69,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":66,"nombre":"Modelo Básico Theta 66","categoria":"Tablets","precio":368.92,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":67,"nombre":"Versión Plus Theta 67","categoria":"Auriculares","precio":379.19,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":68,"nombre":"Serie Advance Theta 68","categoria":"Portátiles","precio":389.20,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":69,"nombre":"Edición Special Theta 69","categoria":"Componentes PC","precio":372.07,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":70,"nombre":"Gama Elite Theta 70","categoria":"Periféricos","precio":386.33,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":71,"nombre":"Línea Classic Theta 71","categoria":"Cocina","precio":377.31,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":72,"nombre":"Producto Premium Lambda 72","categoria":"Decoración","precio":416.88,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":73,"nombre":"Artículo Pro Lambda 73","categoria":"Fitness","precio":410.13,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":74,"nombre":"Item Deluxe Lambda 74","categoria":"Running","precio":425.03,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":75,"nombre":"Modelo Básico Lambda 75","categoria":"Electrónica","precio":411.95,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":76,"nombre":"Versión Plus Lambda 76","categoria":"Informática","precio":395.16,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":77,"nombre":"Serie Advance Lambda 77","categoria":"Hogar","precio":433.51,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":78,"nombre":"Edición Special Lambda 78","categoria":"Deportes","precio":430.55,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":79,"nombre":"Gama Elite Lambda 79","categoria":"Moda","precio":417.98,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":80,"nombre":"Línea Classic Lambda 80","categoria":"Smartphones","precio":415.74,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":81,"nombre":"Producto Premium Alpha 81","categoria":"Tablets","precio":444.30,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":82,"nombre":"Artículo Pro Alpha 82","categoria":"Auriculares","precio":446.18,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":83,"nombre":"Item Deluxe Alpha 83","categoria":"Portátiles","precio":431.41,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":84,"nombre":"Modelo Básico Alpha 84","categoria":"Componentes PC","precio":434.76,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":85,"nombre":"Versión Plus Alpha 85","categoria":"Periféricos","precio":483.71,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":86,"nombre":"Serie Advance Alpha 86","categoria":"Cocina","precio":447.28,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":87,"nombre":"Edición Special Alpha 87","categoria":"Decoración","precio":452.06,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":88,"nombre":"Gama Elite Alpha 88","categoria":"Fitness","precio":465.09,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":89,"nombre":"Línea Classic Alpha 89","categoria":"Running","precio":457.24,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":90,"nombre":"Producto Premium Beta 90","categoria":"Electrónica","precio":480.20,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":91,"nombre":"Artículo Pro Beta 91","categoria":"Informática","precio":469.32,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":92,"nombre":"Item Deluxe Beta 92","categoria":"Hogar","precio":502.24,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":93,"nombre":"Modelo Básico Beta 93","categoria":"Deportes","precio":476.48,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":94,"nombre":"Versión Plus Beta 94","categoria":"Moda","precio":503.66,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":95,"nombre":"Serie Advance Beta 95","categoria":"Smartphones","precio":514.24,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":96,"nombre":"Edición Special Beta 96","categoria":"Tablets","precio":501.12,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":97,"nombre":"Gama Elite Beta 97","categoria":"Auriculares","precio":524.36,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":98,"nombre":"Línea Classic Beta 98","categoria":"Portátiles","precio":521.98,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":99,"nombre":"Producto Premium Gamma 99","categoria":"Componentes PC","precio":509.59,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":100,"nombre":"Artículo Pro Gamma 100","categoria":"Periféricos","precio":46.25,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":101,"nombre":"Item Deluxe Gamma 101","categoria":"Cocina","precio":55.05,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":102,"nombre":"Modelo Básico Gamma 102","categoria":"Decoración","precio":33.97,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":103,"nombre":"Versión Plus Gamma 103","categoria":"Fitness","precio":33.46,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":104,"nombre":"Serie Advance Gamma 104","categoria":"Running","precio":39.02,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":105,"nombre":"Edición Special Gamma 105","categoria":"Electrónica","precio":60.62,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":106,"nombre":"Gama Elite Gamma 106","categoria":"Informática","precio":72.16,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":107,"nombre":"Línea Classic Gamma 107","categoria":"Hogar","precio":87.48,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":108,"nombre":"Producto Premium Delta 108","categoria":"Deportes","precio":86.55,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":109,"nombre":"Artículo Pro Delta 109","categoria":"Moda","precio":91.21,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":3,"nombre":"Modelo Básico Alpha 3","categoria":"Deportes","precio":31.31,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":110,"nombre":"Item Deluxe Delta 110","categoria":"Smartphones","precio":69.42,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":111,"nombre":"Modelo Básico Delta 111","categoria":"Tablets","precio":105.01,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":112,"nombre":"Versión Plus Delta 112","categoria":"Auriculares","precio":96.15,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":113,"nombre":"Serie Advance Delta 113","categoria":"Portátiles","precio":116.97,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":114,"nombre":"Edición Special Delta 114","categoria":"Componentes PC","precio":127.45,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":115,"nombre":"Gama Elite Delta 115","categoria":"Periféricos","precio":85.62,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":116,"nombre":"Línea Classic Delta 116","categoria":"Cocina","precio":138.10,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":117,"nombre":"Producto Premium Epsilon 117","categoria":"Decoración","precio":137.75,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":118,"nombre":"Artículo Pro Epsilon 118","categoria":"Fitness","precio":124.21,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":119,"nombre":"Item Deluxe Epsilon 119","categoria":"Running","precio":114.34,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":120,"nombre":"Modelo Básico Epsilon 120","categoria":"Electrónica","precio":152.13,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":121,"nombre":"Versión Plus Epsilon 121","categoria":"Informática","precio":156.86,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":122,"nombre":"Serie Advance Epsilon 122","categoria":"Hogar","precio":158.27,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":123,"nombre":"Edición Special Epsilon 123","categoria":"Deportes","precio":167.81,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":124,"nombre":"Gama Elite Epsilon 124","categoria":"Moda","precio":170.40,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":125,"nombre":"Línea Classic Epsilon 125","categoria":"Smartphones","precio":136.93,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":126,"nombre":"Producto Premium Omega 126","categoria":"Tablets","precio":152.60,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":127,"nombre":"Artículo Pro Omega 127","categoria":"Auriculares","precio":163.22,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":128,"nombre":"Item Deluxe Omega 128","categoria":"Portátiles","precio":192.28,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":129,"nombre":"Modelo Básico Omega 129","categoria":"Componentes PC","precio":198.86,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":130,"nombre":"Versión Plus Omega 130","categoria":"Periféricos","precio":198.25,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":131,"nombre":"Serie Advance Omega 131","categoria":"Cocina","precio":172.03,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":132,"nombre":"Edición Special Omega 132","categoria":"Decoración","precio":172.51,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":133,"nombre":"Gama Elite Omega 133","categoria":"Fitness","precio":177.49,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":134,"nombre":"Línea Classic Omega 134","categoria":"Running","precio":224.13,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":135,"nombre":"Producto Premium Sigma 135","categoria":"Electrónica","precio":207.71,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":136,"nombre":"Artículo Pro Sigma 136","categoria":"Informática","precio":238.99,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":137,"nombre":"Item Deluxe Sigma 137","categoria":"Hogar","precio":213.70,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":138,"nombre":"Modelo Básico Sigma 138","categoria":"Deportes","precio":246.34,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":139,"nombre":"Versión Plus Sigma 139","categoria":"Moda","precio":206.22,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":140,"nombre":"Serie Advance Sigma 140","categoria":"Smartphones","precio":225.37,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":141,"nombre":"Edición Special Sigma 141","categoria":"Tablets","precio":250.30,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":142,"nombre":"Gama Elite Sigma 142","categoria":"Auriculares","precio":234.21,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":143,"nombre":"Línea Classic Sigma 143","categoria":"Portátiles","precio":228.14,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":144,"nombre":"Producto Premium Theta 144","categoria":"Componentes PC","precio":233.73,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":145,"nombre":"Artículo Pro Theta 145","categoria":"Periféricos","precio":245.42,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":146,"nombre":"Item Deluxe Theta 146","categoria":"Cocina","precio":244.25,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":147,"nombre":"Modelo Básico Theta 147","categoria":"Decoración","precio":289.33,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":148,"nombre":"Versión Plus Theta 148","categoria":"Fitness","precio":279.64,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":149,"nombre":"Serie Advance Theta 149","categoria":"Running","precio":259.55,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":150,"nombre":"Edición Special Theta 150","categoria":"Electrónica","precio":266.19,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":151,"nombre":"Gama Elite Theta 151","categoria":"Informática","precio":302.19,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":152,"nombre":"Línea Classic Theta 152","categoria":"Hogar","precio":290.55,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":153,"nombre":"Producto Premium Lambda 153","categoria":"Deportes","precio":297.31,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":154,"nombre":"Artículo Pro Lambda 154","categoria":"Moda","precio":309.03,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":155,"nombre":"Item Deluxe Lambda 155","categoria":"Smartphones","precio":291.89,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":156,"nombre":"Modelo Básico Lambda 156","categoria":"Tablets","precio":330.91,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":157,"nombre":"Versión Plus Lambda 157","categoria":"Auriculares","precio":313.02,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":158,"nombre":"Serie Advance Lambda 158","categoria":"Portátiles","precio":329.43,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":159,"nombre":"Edición Special Lambda 159","categoria":"Componentes PC","precio":316.42,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":160,"nombre":"Gama Elite Lambda 160","categoria":"Periféricos","precio":348.58,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":161,"nombre":"Línea Classic Lambda 161","categoria":"Cocina","precio":349.41,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":162,"nombre":"Producto Premium Alpha 162","categoria":"Decoración","precio":366.57,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":163,"nombre":"Artículo Pro Alpha 163","categoria":"Fitness","precio":347.83,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":164,"nombre":"Item Deluxe Alpha 164","categoria":"Running","precio":379.91,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":165,"nombre":"Modelo Básico Alpha 165","categoria":"Electrónica","precio":364.24,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":166,"nombre":"Versión Plus Alpha 166","categoria":"Informática","precio":368.29,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":167,"nombre":"Serie Advance Alpha 167","categoria":"Hogar","precio":373.39,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":168,"nombre":"Edición Special Alpha 168","categoria":"Deportes","precio":369.06,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":169,"nombre":"Gama Elite Alpha 169","categoria":"Moda","precio":385.01,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":170,"nombre":"Línea Classic Alpha 170","categoria":"Smartphones","precio":370.50,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":171,"nombre":"Producto Premium Beta 171","categoria":"Tablets","precio":412.61,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":172,"nombre":"Artículo Pro Beta 172","categoria":"Auriculares","precio":416.23,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":173,"nombre":"Item Deluxe Beta 173","categoria":"Portátiles","precio":416.05,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":174,"nombre":"Modelo Básico Beta 174","categoria":"Componentes PC","precio":415.94,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":175,"nombre":"Versión Plus Beta 175","categoria":"Periféricos","precio":411.16,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":176,"nombre":"Serie Advance Beta 176","categoria":"Cocina","precio":397.61,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":177,"nombre":"Edición Special Beta 177","categoria":"Decoración","precio":397.09,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":178,"nombre":"Gama Elite Beta 178","categoria":"Fitness","precio":441.13,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":179,"nombre":"Línea Classic Beta 179","categoria":"Running","precio":415.88,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":180,"nombre":"Producto Premium Gamma 180","categoria":"Electrónica","precio":423.71,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":181,"nombre":"Artículo Pro Gamma 181","categoria":"Informática","precio":429.17,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":182,"nombre":"Item Deluxe Gamma 182","categoria":"Hogar","precio":462.86,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":183,"nombre":"Modelo Básico Gamma 183","categoria":"Deportes","precio":425.32,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":184,"nombre":"Versión Plus Gamma 184","categoria":"Moda","precio":470.42,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":185,"nombre":"Serie Advance Gamma 185","categoria":"Smartphones","precio":440.63,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":186,"nombre":"Edición Special Gamma 186","categoria":"Tablets","precio":452.53,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":187,"nombre":"Gama Elite Gamma 187","categoria":"Auriculares","precio":484.86,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":188,"nombre":"Línea Classic Gamma 188","categoria":"Portátiles","precio":478.81,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":189,"nombre":"Producto Premium Delta 189","categoria":"Componentes PC","precio":502.61,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":190,"nombre":"Artículo Pro Delta 190","categoria":"Periféricos","precio":477.40,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":191,"nombre":"Item Deluxe Delta 191","categoria":"Cocina","precio":508.31,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":192,"nombre":"Modelo Básico Delta 192","categoria":"Decoración","precio":493.89,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":193,"nombre":"Versión Plus Delta 193","categoria":"Fitness","precio":514.01,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":194,"nombre":"Serie Advance Delta 194","categoria":"Running","precio":524.81,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":195,"nombre":"Edición Special Delta 195","categoria":"Electrónica","precio":497.89,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":196,"nombre":"Gama Elite Delta 196","categoria":"Informática","precio":516.13,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":197,"nombre":"Línea Classic Delta 197","categoria":"Hogar","precio":522.08,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":198,"nombre":"Producto Premium Epsilon 198","categoria":"Deportes","precio":503.46,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":199,"nombre":"Artículo Pro Epsilon 199","categoria":"Moda","precio":532.77,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":200,"nombre":"Item Deluxe Epsilon 200","categoria":"Smartphones","precio":33.11,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":201,"nombre":"Modelo Básico Epsilon 201","categoria":"Tablets","precio":43.42,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":202,"nombre":"Versión Plus Epsilon 202","categoria":"Auriculares","precio":30.59,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":203,"nombre":"Serie Advance Epsilon 203","categoria":"Portátiles","precio":54.27,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":204,"nombre":"Edición Special Epsilon 204","categoria":"Componentes PC","precio":53.82,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":205,"nombre":"Gama Elite Epsilon 205","categoria":"Periféricos","precio":81.98,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":206,"nombre":"Línea Classic Epsilon 206","categoria":"Cocina","precio":46.82,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":207,"nombre":"Producto Premium Omega 207","categoria":"Decoración","precio":62.22,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":208,"nombre":"Artículo Pro Omega 208","categoria":"Fitness","precio":95.73,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":209,"nombre":"Item Deluxe Omega 209","categoria":"Running","precio":102.29,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":210,"nombre":"Modelo Básico Omega 210","categoria":"Electrónica","precio":96.20,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":211,"nombre":"Versión Plus Omega 211","categoria":"Informática","precio":79.53,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":212,"nombre":"Serie Advance Omega 212","categoria":"Hogar","precio":109.35,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":213,"nombre":"Edición Special Omega 213","categoria":"Deportes","precio":79.61,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":214,"nombre":"Gama Elite Omega 214","categoria":"Moda","precio":114.04,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":215,"nombre":"Línea Classic Omega 215","categoria":"Smartphones","precio":129.08,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":216,"nombre":"Producto Premium Sigma 216","categoria":"Tablets","precio":105.23,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":217,"nombre":"Artículo Pro Sigma 217","categoria":"Auriculares","precio":104.11,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":218,"nombre":"Item Deluxe Sigma 218","categoria":"Portátiles","precio":135.93,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":219,"nombre":"Modelo Básico Sigma 219","categoria":"Componentes PC","precio":106.46,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":220,"nombre":"Versión Plus Sigma 220","categoria":"Periféricos","precio":129.45,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":221,"nombre":"Serie Advance Sigma 221","categoria":"Cocina","precio":119.66,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":222,"nombre":"Edición Special Sigma 222","categoria":"Decoración","precio":156.67,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":223,"nombre":"Gama Elite Sigma 223","categoria":"Fitness","precio":127.38,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":224,"nombre":"Línea Classic Sigma 224","categoria":"Running","precio":146.13,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":225,"nombre":"Producto Premium Theta 225","categoria":"Electrónica","precio":171.23,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":226,"nombre":"Artículo Pro Theta 226","categoria":"Informática","precio":171.22,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":227,"nombre":"Item Deluxe Theta 227","categoria":"Hogar","precio":173.15,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":228,"nombre":"Modelo Básico Theta 228","categoria":"Deportes","precio":188.99,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":229,"nombre":"Versión Plus Theta 229","categoria":"Moda","precio":197.73,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":230,"nombre":"Serie Advance Theta 230","categoria":"Smartphones","precio":188.95,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":231,"nombre":"Edición Special Theta 231","categoria":"Tablets","precio":176.59,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":232,"nombre":"Gama Elite Theta 232","categoria":"Auriculares","precio":204.37,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":233,"nombre":"Línea Classic Theta 233","categoria":"Portátiles","precio":218.21,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":234,"nombre":"Producto Premium Lambda 234","categoria":"Componentes PC","precio":221.55,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":235,"nombre":"Artículo Pro Lambda 235","categoria":"Periféricos","precio":208.67,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":236,"nombre":"Item Deluxe Lambda 236","categoria":"Cocina","precio":218.33,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":237,"nombre":"Modelo Básico Lambda 237","categoria":"Decoración","precio":235.39,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":238,"nombre":"Versión Plus Lambda 238","categoria":"Fitness","precio":227.12,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":239,"nombre":"Serie Advance Lambda 239","categoria":"Running","precio":236.85,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":240,"nombre":"Edición Special Lambda 240","categoria":"Electrónica","precio":225.28,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":241,"nombre":"Gama Elite Lambda 241","categoria":"Informática","precio":231.97,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":242,"nombre":"Línea Classic Lambda 242","categoria":"Hogar","precio":221.42,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":243,"nombre":"Producto Premium Alpha 243","categoria":"Deportes","precio":272.95,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":244,"nombre":"Artículo Pro Alpha 244","categoria":"Moda","precio":246.06,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":245,"nombre":"Item Deluxe Alpha 245","categoria":"Smartphones","precio":235.63,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":246,"nombre":"Modelo Básico Alpha 246","categoria":"Tablets","precio":289.34,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":247,"nombre":"Versión Plus Alpha 247","categoria":"Auriculares","precio":272.45,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":248,"nombre":"Serie Advance Alpha 248","categoria":"Portátiles","precio":293.10,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":249,"nombre":"Edición Special Alpha 249","categoria":"Componentes PC","precio":277.84,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":250,"nombre":"Gama Elite Alpha 250","categoria":"Periféricos","precio":306.91,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":251,"nombre":"Línea Classic Alpha 251","categoria":"Cocina","precio":269.41,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":252,"nombre":"Producto Premium Beta 252","categoria":"Decoración","precio":300.94,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":253,"nombre":"Artículo Pro Beta 253","categoria":"Fitness","precio":298.37,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":254,"nombre":"Item Deluxe Beta 254","categoria":"Running","precio":300.35,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":255,"nombre":"Modelo Básico Beta 255","categoria":"Electrónica","precio":300.94,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":256,"nombre":"Versión Plus Beta 256","categoria":"Informática","precio":311.70,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":257,"nombre":"Serie Advance Beta 257","categoria":"Hogar","precio":295.55,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":258,"nombre":"Edición Special Beta 258","categoria":"Deportes","precio":336.70,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":259,"nombre":"Gama Elite Beta 259","categoria":"Moda","precio":335.37,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":260,"nombre":"Línea Classic Beta 260","categoria":"Smartphones","precio":320.67,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":261,"nombre":"Producto Premium Gamma 261","categoria":"Tablets","precio":342.76,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":262,"nombre":"Artículo Pro Gamma 262","categoria":"Auriculares","precio":368.56,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":263,"nombre":"Item Deluxe Gamma 263","categoria":"Portátiles","precio":359.22,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":264,"nombre":"Modelo Básico Gamma 264","categoria":"Componentes PC","precio":333.56,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":265,"nombre":"Versión Plus Gamma 265","categoria":"Periféricos","precio":370.27,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":266,"nombre":"Serie Advance Gamma 266","categoria":"Cocina","precio":359.67,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":267,"nombre":"Edición Special Gamma 267","categoria":"Decoración","precio":375.66,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":268,"nombre":"Gama Elite Gamma 268","categoria":"Fitness","precio":356.98,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":269,"nombre":"Línea Classic Gamma 269","categoria":"Running","precio":397.88,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":270,"nombre":"Producto Premium Delta 270","categoria":"Electrónica","precio":394.03,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":271,"nombre":"Artículo Pro Delta 271","categoria":"Informática","precio":409.27,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":272,"nombre":"Item Deluxe Delta 272","categoria":"Hogar","precio":404.05,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":273,"nombre":"Modelo Básico Delta 273","categoria":"Deportes","precio":385.33,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":274,"nombre":"Versión Plus Delta 274","categoria":"Moda","precio":408.97,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":275,"nombre":"Serie Advance Delta 275","categoria":"Smartphones","precio":419.14,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":276,"nombre":"Edición Special Delta 276","categoria":"Tablets","precio":413.69,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":277,"nombre":"Gama Elite Delta 277","categoria":"Auriculares","precio":396.23,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":278,"nombre":"Línea Classic Delta 278","categoria":"Portátiles","precio":430.55,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":279,"nombre":"Producto Premium Epsilon 279","categoria":"Componentes PC","precio":450.67,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":280,"nombre":"Artículo Pro Epsilon 280","categoria":"Periféricos","precio":450.28,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":281,"nombre":"Item Deluxe Epsilon 281","categoria":"Cocina","precio":438.49,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":282,"nombre":"Modelo Básico Epsilon 282","categoria":"Decoración","precio":451.98,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":283,"nombre":"Versión Plus Epsilon 283","categoria":"Fitness","precio":442.98,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":284,"nombre":"Serie Advance Epsilon 284","categoria":"Running","precio":471.46,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":285,"nombre":"Edición Special Epsilon 285","categoria":"Electrónica","precio":480.18,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":286,"nombre":"Gama Elite Epsilon 286","categoria":"Informática","precio":470.40,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":287,"nombre":"Línea Classic Epsilon 287","categoria":"Hogar","precio":454.20,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":288,"nombre":"Producto Premium Omega 288","categoria":"Deportes","precio":493.43,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":289,"nombre":"Artículo Pro Omega 289","categoria":"Moda","precio":467.52,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":290,"nombre":"Item Deluxe Omega 290","categoria":"Smartphones","precio":486.07,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":291,"nombre":"Modelo Básico Omega 291","categoria":"Tablets","precio":491.74,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":292,"nombre":"Versión Plus Omega 292","categoria":"Auriculares","precio":480.81,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":293,"nombre":"Serie Advance Omega 293","categoria":"Portátiles","precio":502.32,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":294,"nombre":"Edición Special Omega 294","categoria":"Componentes PC","precio":500.71,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":295,"nombre":"Gama Elite Omega 295","categoria":"Periféricos","precio":530.72,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":296,"nombre":"Línea Classic Omega 296","categoria":"Cocina","precio":501.40,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":297,"nombre":"Producto Premium Sigma 297","categoria":"Decoración","precio":517.77,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":298,"nombre":"Artículo Pro Sigma 298","categoria":"Fitness","precio":531.34,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":299,"nombre":"Item Deluxe Sigma 299","categoria":"Running","precio":548.83,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":300,"nombre":"Modelo Básico Sigma 300","categoria":"Electrónica","precio":37.95,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":301,"nombre":"Versión Plus Sigma 301","categoria":"Informática","precio":29.53,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":302,"nombre":"Serie Advance Sigma 302","categoria":"Hogar","precio":59.13,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":303,"nombre":"Edición Special Sigma 303","categoria":"Deportes","precio":71.77,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":304,"nombre":"Gama Elite Sigma 304","categoria":"Moda","precio":60.36,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":305,"nombre":"Línea Classic Sigma 305","categoria":"Smartphones","precio":78.12,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":306,"nombre":"Producto Premium Theta 306","categoria":"Tablets","precio":86.70,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":307,"nombre":"Artículo Pro Theta 307","categoria":"Auriculares","precio":64.86,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":308,"nombre":"Item Deluxe Theta 308","categoria":"Portátiles","precio":86.14,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":309,"nombre":"Modelo Básico Theta 309","categoria":"Componentes PC","precio":82.45,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":310,"nombre":"Versión Plus Theta 310","categoria":"Periféricos","precio":70.66,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":311,"nombre":"Serie Advance Theta 311","categoria":"Cocina","precio":82.36,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":312,"nombre":"Edición Special Theta 312","categoria":"Decoración","precio":116.56,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":313,"nombre":"Gama Elite Theta 313","categoria":"Fitness","precio":101.82,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":314,"nombre":"Línea Classic Theta 314","categoria":"Running","precio":107.90,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":315,"nombre":"Producto Premium Lambda 315","categoria":"Electrónica","precio":100.42,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":316,"nombre":"Artículo Pro Lambda 316","categoria":"Informática","precio":131.31,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":317,"nombre":"Item Deluxe Lambda 317","categoria":"Hogar","precio":102.23,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":318,"nombre":"Modelo Básico Lambda 318","categoria":"Deportes","precio":132.01,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":319,"nombre":"Versión Plus Lambda 319","categoria":"Moda","precio":145.65,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":320,"nombre":"Serie Advance Lambda 320","categoria":"Smartphones","precio":122.09,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":321,"nombre":"Edición Special Lambda 321","categoria":"Tablets","precio":121.02,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":322,"nombre":"Gama Elite Lambda 322","categoria":"Auriculares","precio":146.38,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":323,"nombre":"Línea Classic Lambda 323","categoria":"Portátiles","precio":169.68,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":324,"nombre":"Producto Premium Alpha 324","categoria":"Componentes PC","precio":135.71,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":325,"nombre":"Artículo Pro Alpha 325","categoria":"Periféricos","precio":142.65,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":326,"nombre":"Item Deluxe Alpha 326","categoria":"Cocina","precio":140.59,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":327,"nombre":"Modelo Básico Alpha 327","categoria":"Decoración","precio":157.08,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":328,"nombre":"Versión Plus Alpha 328","categoria":"Fitness","precio":186.71,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":329,"nombre":"Serie Advance Alpha 329","categoria":"Running","precio":184.22,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":330,"nombre":"Edición Special Alpha 330","categoria":"Electrónica","precio":169.22,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":331,"nombre":"Gama Elite Alpha 331","categoria":"Informática","precio":186.77,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":332,"nombre":"Línea Classic Alpha 332","categoria":"Hogar","precio":197.79,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":333,"nombre":"Producto Premium Beta 333","categoria":"Deportes","precio":185.33,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":334,"nombre":"Artículo Pro Beta 334","categoria":"Moda","precio":187.34,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":335,"nombre":"Item Deluxe Beta 335","categoria":"Smartphones","precio":222.52,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":336,"nombre":"Modelo Básico Beta 336","categoria":"Tablets","precio":194.74,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":337,"nombre":"Versión Plus Beta 337","categoria":"Auriculares","precio":232.44,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":338,"nombre":"Serie Advance Beta 338","categoria":"Portátiles","precio":246.93,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":339,"nombre":"Edición Special Beta 339","categoria":"Componentes PC","precio":216.48,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":340,"nombre":"Gama Elite Beta 340","categoria":"Periféricos","precio":240.32,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":341,"nombre":"Línea Classic Beta 341","categoria":"Cocina","precio":215.38,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":342,"nombre":"Producto Premium Gamma 342","categoria":"Decoración","precio":242.91,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":343,"nombre":"Artículo Pro Gamma 343","categoria":"Fitness","precio":267.85,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":344,"nombre":"Item Deluxe Gamma 344","categoria":"Running","precio":241.55,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":345,"nombre":"Modelo Básico Gamma 345","categoria":"Electrónica","precio":278.93,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":346,"nombre":"Versión Plus Gamma 346","categoria":"Informática","precio":257.26,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":347,"nombre":"Serie Advance Gamma 347","categoria":"Hogar","precio":278.09,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":348,"nombre":"Edición Special Gamma 348","categoria":"Deportes","precio":267.23,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":349,"nombre":"Gama Elite Gamma 349","categoria":"Moda","precio":263.22,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":350,"nombre":"Línea Classic Gamma 350","categoria":"Smartphones","precio":260.09,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":351,"nombre":"Producto Premium Delta 351","categoria":"Tablets","precio":299.40,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":352,"nombre":"Artículo Pro Delta 352","categoria":"Auriculares","precio":293.64,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":353,"nombre":"Item Deluxe Delta 353","categoria":"Portátiles","precio":290.13,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":354,"nombre":"Modelo Básico Delta 354","categoria":"Componentes PC","precio":292.23,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":355,"nombre":"Versión Plus Delta 355","categoria":"Periféricos","precio":287.15,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":356,"nombre":"Serie Advance Delta 356","categoria":"Cocina","precio":316.02,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":357,"nombre":"Edición Special Delta 357","categoria":"Decoración","precio":301.46,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":358,"nombre":"Gama Elite Delta 358","categoria":"Fitness","precio":302.59,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":359,"nombre":"Línea Classic Delta 359","categoria":"Running","precio":352.84,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":360,"nombre":"Producto Premium Epsilon 360","categoria":"Electrónica","precio":335.78,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":361,"nombre":"Artículo Pro Epsilon 361","categoria":"Informática","precio":330.01,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":362,"nombre":"Item Deluxe Epsilon 362","categoria":"Hogar","precio":347.01,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":363,"nombre":"Modelo Básico Epsilon 363","categoria":"Deportes","precio":372.36,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":364,"nombre":"Versión Plus Epsilon 364","categoria":"Moda","precio":334.83,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":365,"nombre":"Serie Advance Epsilon 365","categoria":"Smartphones","precio":355.45,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":366,"nombre":"Edición Special Epsilon 366","categoria":"Tablets","precio":368.21,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":367,"nombre":"Gama Elite Epsilon 367","categoria":"Auriculares","precio":353.19,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":368,"nombre":"Línea Classic Epsilon 368","categoria":"Portátiles","precio":358.06,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":369,"nombre":"Producto Premium Omega 369","categoria":"Componentes PC","precio":387.64,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":370,"nombre":"Artículo Pro Omega 370","categoria":"Periféricos","precio":376.35,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":371,"nombre":"Item Deluxe Omega 371","categoria":"Cocina","precio":405.66,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":372,"nombre":"Modelo Básico Omega 372","categoria":"Decoración","precio":416.38,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":373,"nombre":"Versión Plus Omega 373","categoria":"Fitness","precio":385.33,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":374,"nombre":"Serie Advance Omega 374","categoria":"Running","precio":390.47,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":375,"nombre":"Edición Special Omega 375","categoria":"Electrónica","precio":419.77,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":376,"nombre":"Gama Elite Omega 376","categoria":"Informática","precio":417.61,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":377,"nombre":"Línea Classic Omega 377","categoria":"Hogar","precio":423.75,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":378,"nombre":"Producto Premium Sigma 378","categoria":"Deportes","precio":433.41,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":379,"nombre":"Artículo Pro Sigma 379","categoria":"Moda","precio":447.02,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":380,"nombre":"Item Deluxe Sigma 380","categoria":"Smartphones","precio":426.49,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":381,"nombre":"Modelo Básico Sigma 381","categoria":"Tablets","precio":429.91,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":382,"nombre":"Versión Plus Sigma 382","categoria":"Auriculares","precio":435.37,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":383,"nombre":"Serie Advance Sigma 383","categoria":"Portátiles","precio":430.35,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":384,"nombre":"Edición Special Sigma 384","categoria":"Componentes PC","precio":455.00,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":385,"nombre":"Gama Elite Sigma 385","categoria":"Periféricos","precio":445.72,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":386,"nombre":"Línea Classic Sigma 386","categoria":"Cocina","precio":485.71,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":387,"nombre":"Producto Premium Theta 387","categoria":"Decoración","precio":478.21,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":388,"nombre":"Artículo Pro Theta 388","categoria":"Fitness","precio":457.88,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":389,"nombre":"Item Deluxe Theta 389","categoria":"Running","precio":474.31,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":390,"nombre":"Modelo Básico Theta 390","categoria":"Electrónica","precio":492.22,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":391,"nombre":"Versión Plus Theta 391","categoria":"Informática","precio":508.21,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":392,"nombre":"Serie Advance Theta 392","categoria":"Hogar","precio":512.85,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":393,"nombre":"Edición Special Theta 393","categoria":"Deportes","precio":483.32,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":394,"nombre":"Gama Elite Theta 394","categoria":"Moda","precio":508.18,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":395,"nombre":"Línea Classic Theta 395","categoria":"Smartphones","precio":534.96,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":396,"nombre":"Producto Premium Lambda 396","categoria":"Tablets","precio":492.41,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":397,"nombre":"Artículo Pro Lambda 397","categoria":"Auriculares","precio":519.92,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":398,"nombre":"Item Deluxe Lambda 398","categoria":"Portátiles","precio":523.40,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":399,"nombre":"Modelo Básico Lambda 399","categoria":"Componentes PC","precio":537.97,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":400,"nombre":"Versión Plus Lambda 400","categoria":"Periféricos","precio":29.80,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":401,"nombre":"Serie Advance Lambda 401","categoria":"Cocina","precio":37.72,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":402,"nombre":"Edición Special Lambda 402","categoria":"Decoración","precio":37.23,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":403,"nombre":"Gama Elite Lambda 403","categoria":"Fitness","precio":31.84,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":404,"nombre":"Línea Classic Lambda 404","categoria":"Running","precio":59.05,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":405,"nombre":"Producto Premium Alpha 405","categoria":"Electrónica","precio":84.05,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":406,"nombre":"Artículo Pro Alpha 406","categoria":"Informática","precio":47.00,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":407,"nombre":"Item Deluxe Alpha 407","categoria":"Hogar","precio":68.68,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":408,"nombre":"Modelo Básico Alpha 408","categoria":"Deportes","precio":63.15,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":409,"nombre":"Versión Plus Alpha 409","categoria":"Moda","precio":93.83,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":410,"nombre":"Serie Advance Alpha 410","categoria":"Smartphones","precio":79.68,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":411,"nombre":"Edición Special Alpha 411","categoria":"Tablets","precio":106.60,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":412,"nombre":"Gama Elite Alpha 412","categoria":"Auriculares","precio":72.19,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":413,"nombre":"Línea Classic Alpha 413","categoria":"Portátiles","precio":100.96,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":414,"nombre":"Producto Premium Beta 414","categoria":"Componentes PC","precio":116.13,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":415,"nombre":"Artículo Pro Beta 415","categoria":"Periféricos","precio":96.54,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":416,"nombre":"Item Deluxe Beta 416","categoria":"Cocina","precio":91.22,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":417,"nombre":"Modelo Básico Beta 417","categoria":"Decoración","precio":122.44,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":418,"nombre":"Versión Plus Beta 418","categoria":"Fitness","precio":133.16,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":419,"nombre":"Serie Advance Beta 419","categoria":"Running","precio":141.84,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":420,"nombre":"Edición Special Beta 420","categoria":"Electrónica","precio":146.75,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":421,"nombre":"Gama Elite Beta 421","categoria":"Informática","precio":134.35,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":422,"nombre":"Línea Classic Beta 422","categoria":"Hogar","precio":137.70,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":423,"nombre":"Producto Premium Gamma 423","categoria":"Deportes","precio":129.22,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":424,"nombre":"Artículo Pro Gamma 424","categoria":"Moda","precio":141.80,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":425,"nombre":"Item Deluxe Gamma 425","categoria":"Smartphones","precio":137.31,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":426,"nombre":"Modelo Básico Gamma 426","categoria":"Tablets","precio":170.60,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":427,"nombre":"Versión Plus Gamma 427","categoria":"Auriculares","precio":156.87,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":428,"nombre":"Serie Advance Gamma 428","categoria":"Portátiles","precio":191.48,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":429,"nombre":"Edición Special Gamma 429","categoria":"Componentes PC","precio":177.88,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":430,"nombre":"Gama Elite Gamma 430","categoria":"Periféricos","precio":182.13,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":431,"nombre":"Línea Classic Gamma 431","categoria":"Cocina","precio":196.51,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":432,"nombre":"Producto Premium Delta 432","categoria":"Decoración","precio":186.37,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":433,"nombre":"Artículo Pro Delta 433","categoria":"Fitness","precio":209.45,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":434,"nombre":"Item Deluxe Delta 434","categoria":"Running","precio":222.75,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":435,"nombre":"Modelo Básico Delta 435","categoria":"Electrónica","precio":233.53,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":436,"nombre":"Versión Plus Delta 436","categoria":"Informática","precio":191.79,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":437,"nombre":"Serie Advance Delta 437","categoria":"Hogar","precio":215.18,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":438,"nombre":"Edición Special Delta 438","categoria":"Deportes","precio":214.66,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":439,"nombre":"Gama Elite Delta 439","categoria":"Moda","precio":239.50,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":440,"nombre":"Línea Classic Delta 440","categoria":"Smartphones","precio":236.61,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":441,"nombre":"Producto Premium Epsilon 441","categoria":"Tablets","precio":257.54,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":442,"nombre":"Artículo Pro Epsilon 442","categoria":"Auriculares","precio":231.20,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":443,"nombre":"Item Deluxe Epsilon 443","categoria":"Portátiles","precio":270.67,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":444,"nombre":"Modelo Básico Epsilon 444","categoria":"Componentes PC","precio":262.15,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":445,"nombre":"Versión Plus Epsilon 445","categoria":"Periféricos","precio":278.35,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":446,"nombre":"Serie Advance Epsilon 446","categoria":"Cocina","precio":257.36,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":447,"nombre":"Edición Special Epsilon 447","categoria":"Decoración","precio":248.18,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":448,"nombre":"Gama Elite Epsilon 448","categoria":"Fitness","precio":263.49,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":449,"nombre":"Línea Classic Epsilon 449","categoria":"Running","precio":280.41,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":450,"nombre":"Producto Premium Omega 450","categoria":"Electrónica","precio":292.28,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":451,"nombre":"Artículo Pro Omega 451","categoria":"Informática","precio":296.90,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":452,"nombre":"Item Deluxe Omega 452","categoria":"Hogar","precio":317.73,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":453,"nombre":"Modelo Básico Omega 453","categoria":"Deportes","precio":303.59,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":454,"nombre":"Versión Plus Omega 454","categoria":"Moda","precio":319.58,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":455,"nombre":"Serie Advance Omega 455","categoria":"Smartphones","precio":292.70,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":456,"nombre":"Edición Special Omega 456","categoria":"Tablets","precio":326.85,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":457,"nombre":"Gama Elite Omega 457","categoria":"Auriculares","precio":338.03,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":458,"nombre":"Línea Classic Omega 458","categoria":"Portátiles","precio":311.39,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":459,"nombre":"Producto Premium Sigma 459","categoria":"Componentes PC","precio":341.07,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":460,"nombre":"Artículo Pro Sigma 460","categoria":"Periféricos","precio":318.68,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":461,"nombre":"Item Deluxe Sigma 461","categoria":"Cocina","precio":339.36,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":462,"nombre":"Modelo Básico Sigma 462","categoria":"Decoración","precio":362.64,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":463,"nombre":"Versión Plus Sigma 463","categoria":"Fitness","precio":366.73,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":464,"nombre":"Serie Advance Sigma 464","categoria":"Running","precio":346.75,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":465,"nombre":"Edición Special Sigma 465","categoria":"Electrónica","precio":368.54,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":466,"nombre":"Gama Elite Sigma 466","categoria":"Informática","precio":374.11,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":467,"nombre":"Línea Classic Sigma 467","categoria":"Hogar","precio":353.25,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":468,"nombre":"Producto Premium Theta 468","categoria":"Deportes","precio":394.33,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":469,"nombre":"Artículo Pro Theta 469","categoria":"Moda","precio":390.51,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":470,"nombre":"Item Deluxe Theta 470","categoria":"Smartphones","precio":377.10,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":471,"nombre":"Modelo Básico Theta 471","categoria":"Tablets","precio":381.13,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":472,"nombre":"Versión Plus Theta 472","categoria":"Auriculares","precio":370.26,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":473,"nombre":"Serie Advance Theta 473","categoria":"Portátiles","precio":385.25,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":474,"nombre":"Edición Special Theta 474","categoria":"Componentes PC","precio":418.20,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":475,"nombre":"Gama Elite Theta 475","categoria":"Periféricos","precio":407.36,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":476,"nombre":"Línea Classic Theta 476","categoria":"Cocina","precio":421.60,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":477,"nombre":"Producto Premium Lambda 477","categoria":"Decoración","precio":441.62,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":478,"nombre":"Artículo Pro Lambda 478","categoria":"Fitness","precio":433.78,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":479,"nombre":"Item Deluxe Lambda 479","categoria":"Running","precio":424.58,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":480,"nombre":"Modelo Básico Lambda 480","categoria":"Electrónica","precio":410.61,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":481,"nombre":"Versión Plus Lambda 481","categoria":"Informática","precio":459.16,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":482,"nombre":"Serie Advance Lambda 482","categoria":"Hogar","precio":448.96,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":483,"nombre":"Edición Special Lambda 483","categoria":"Deportes","precio":426.34,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":484,"nombre":"Gama Elite Lambda 484","categoria":"Moda","precio":471.07,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":485,"nombre":"Línea Classic Lambda 485","categoria":"Smartphones","precio":475.38,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":486,"nombre":"Producto Premium Alpha 486","categoria":"Tablets","precio":452.69,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":487,"nombre":"Artículo Pro Alpha 487","categoria":"Auriculares","precio":462.97,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":488,"nombre":"Item Deluxe Alpha 488","categoria":"Portátiles","precio":481.69,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":489,"nombre":"Modelo Básico Alpha 489","categoria":"Componentes PC","precio":462.94,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":490,"nombre":"Versión Plus Alpha 490","categoria":"Periféricos","precio":481.44,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":491,"nombre":"Serie Advance Alpha 491","categoria":"Cocina","precio":480.41,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}
+{"producto_id":492,"nombre":"Edición Special Alpha 492","categoria":"Decoración","precio":477.51,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":493,"nombre":"Gama Elite Alpha 493","categoria":"Fitness","precio":489.59,"stock":100,"vendedor_id":4,"vendedor_nombre":"DeporTotal"}
+{"producto_id":494,"nombre":"Línea Classic Alpha 494","categoria":"Running","precio":510.17,"stock":100,"vendedor_id":5,"vendedor_nombre":"ModaOnline"}
+{"producto_id":495,"nombre":"Producto Premium Beta 495","categoria":"Electrónica","precio":521.84,"stock":100,"vendedor_id":6,"vendedor_nombre":"GadgetWorld"}
+{"producto_id":496,"nombre":"Artículo Pro Beta 496","categoria":"Informática","precio":513.54,"stock":100,"vendedor_id":7,"vendedor_nombre":"InformáticaPro"}
+{"producto_id":497,"nombre":"Item Deluxe Beta 497","categoria":"Hogar","precio":525.04,"stock":100,"vendedor_id":8,"vendedor_nombre":"CasaIdeal"}
+{"producto_id":498,"nombre":"Modelo Básico Beta 498","categoria":"Deportes","precio":536.00,"stock":100,"vendedor_id":9,"vendedor_nombre":"SportLine"}
+{"producto_id":499,"nombre":"Versión Plus Beta 499","categoria":"Moda","precio":543.19,"stock":100,"vendedor_id":10,"vendedor_nombre":"FashionTrend"}
+{"producto_id":500,"nombre":"Serie Advance Beta 500","categoria":"Smartphones","precio":23.95,"stock":100,"vendedor_id":1,"vendedor_nombre":"TechStore España"}
+{"producto_id":2,"nombre":"Item Deluxe Alpha 2","categoria":"Hogar","precio":50.07,"stock":100,"vendedor_id":3,"vendedor_nombre":"HomePlus"}
+{"producto_id":1,"nombre":"Artículo Pro Alpha 1","categoria":"Informática","precio":55.91,"stock":100,"vendedor_id":2,"vendedor_nombre":"ElectroMax"}

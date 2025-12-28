@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 4: Guía de Ejecución y Capturas</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #1F4E79;
+            border-bottom: 3px solid #1F4E79;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1F4E79;
+            margin-top: 40px;
+        }
+        .diagram-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .captura-box {
+            background: #90EE90;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #228B22;
+        }
+        .warning-box {
+            background: #FFB6C1;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #DC143C;
+        }
+        .info-box {
+            background: #87CEEB;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #4169E1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            background: #1F4E79;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>FASE 4: RECUPERACIÓN - Guía de Ejecución</h1>
+    
+    <div class="info-box">
+        <strong>Importante:</strong> Todo se ejecuta en UNA SOLA ventana de Query Tool de pgAdmin. 
+        No necesitas múltiples terminales para esta fase.
+    </div>
+
+    <h2>Resumen de Capturas Necesarias</h2>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Captura</th>
+            <th>Qué Muestra</th>
+            <th>Sección</th>
+        </tr>
+        <tr><td>01</td><td>Configuración WAL</td><td>wal_level, checkpoint_timeout, etc.</td><td>Parte 1</td></tr>
+        <tr><td>02</td><td>LSN antes/después</td><td>Avance del WAL tras transacción</td><td>Parte 2</td></tr>
+        <tr><td>03</td><td>Log transacciones</td><td>XID, LSN, operaciones registradas</td><td>Parte 2</td></tr>
+        <tr><td>04a</td><td>T2 sin confirmar</td><td>Stock=94 durante transacción</td><td>Parte 3</td></tr>
+        <tr><td>04b</td><td>T2 revertida (UNDO)</td><td>Stock=97 tras ROLLBACK</td><td>Parte 3</td></tr>
+        <tr><td>05</td><td>Log UNDO/REDO</td><td>Valores antes/después para recuperar</td><td>Parte 4</td></tr>
+        <tr><td>06</td><td>Checkpoint</td><td>LSN y timestamp del checkpoint</td><td>Parte 5</td></tr>
+        <tr><td>07</td><td>Política backup</td><td>Frecuencias y retención</td><td>Parte 6</td></tr>
+        <tr><td>08</td><td>Procedimiento PITR</td><td>7 pasos de recuperación</td><td>Parte 7</td></tr>
+    </table>
+
+    <h2>Diagrama de Flujo de Ejecución</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+flowchart TD
+    subgraph INICIO["1. PREPARACION"]
+        A[Abrir pgAdmin] --> B[Conectar a marketplace_indices]
+        B --> C[Abrir Query Tool]
+    end
+
+    subgraph CONFIG["2. CONFIGURACION WAL"]
+        C --> D[Ejecutar consulta pg_settings]
+        D --> CAP1["📸 CAPTURA 01: Parametros WAL"]
+    end
+
+    subgraph CICLO["3. CICLO DE VIDA TRANSACCION"]
+        CAP1 --> E[Crear tabla log_transacciones]
+        E --> F[Crear funcion registrar_ciclo]
+        F --> G["SELECT pg_current_wal_lsn (ANTES)"]
+        G --> H[BEGIN + UPDATE + COMMIT]
+        H --> I["SELECT pg_current_wal_lsn (DESPUES)"]
+        I --> CAP2["📸 CAPTURA 02: LSN antes/despues"]
+        CAP2 --> J[SELECT FROM log_transacciones]
+        J --> CAP3["📸 CAPTURA 03: Log con XID y LSN"]
+    end
+
+    subgraph FALLO["4. SIMULACION FALLO - UNDO"]
+        CAP3 --> K["UPDATE stock = 100 (inicial)"]
+        K --> L["T1: BEGIN + UPDATE + COMMIT"]
+        L --> M["T2: BEGIN + UPDATE (SIN COMMIT)"]
+        M --> N["Ver stock = 94 (no confirmado)"]
+        N --> CAP4A["📸 CAPTURA 04a: Stock durante T2"]
+        CAP4A --> O["ROLLBACK (simula UNDO)"]
+        O --> P["Ver stock = 97 (restaurado)"]
+        P --> CAP4B["📸 CAPTURA 04b: Stock tras UNDO"]
+    end
+
+    subgraph UNDOREDO["5. LOG UNDO/REDO"]
+        CAP4B --> Q[Crear tabla log_undo_redo]
+        Q --> R[Crear funcion compra_con_log]
+        R --> S[Ejecutar 3 compras]
+        S --> T[SELECT FROM log_undo_redo]
+        T --> CAP5["📸 CAPTURA 05: Valores UNDO/REDO"]
+    end
+
+    subgraph CHECKPOINT["6. CHECKPOINTING"]
+        CAP5 --> U[Ver configuracion checkpoints]
+        U --> V["pg_control_checkpoint() ANTES"]
+        V --> W[CHECKPOINT manual]
+        W --> X["pg_control_checkpoint() DESPUES"]
+        X --> CAP6["📸 CAPTURA 06: Checkpoint actualizado"]
+    end
+
+    subgraph POLITICA["7. POLITICA RETENCION"]
+        CAP6 --> Y[Ver config archive_mode]
+        Y --> Z[Crear tabla politica_backup]
+        Z --> AA[INSERT politicas]
+        AA --> CAP7["📸 CAPTURA 07: Tabla de politicas"]
+    end
+
+    subgraph PITR["8. PROCEDIMIENTO PITR"]
+        CAP7 --> BB[Crear tabla procedimiento_pitr]
+        BB --> CC[INSERT 7 pasos]
+        CC --> CAP8["📸 CAPTURA 08: Pasos PITR"]
+    end
+
+    subgraph FIN["9. FINALIZACION"]
+        CAP8 --> DD[Verificar integridad]
+        DD --> EE[Restaurar stocks]
+        EE --> FF["✅ FASE 4 COMPLETADA"]
+    end
+
+    style CAP1 fill:#90EE90
+    style CAP2 fill:#90EE90
+    style CAP3 fill:#90EE90
+    style CAP4A fill:#FFB6C1
+    style CAP4B fill:#90EE90
+    style CAP5 fill:#90EE90
+    style CAP6 fill:#90EE90
+    style CAP7 fill:#90EE90
+    style CAP8 fill:#90EE90
+    style FF fill:#87CEEB
+        </div>
+    </div>
+
+    <h2>Diagrama de Simulación UNDO</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+sequenceDiagram
+    participant U as Usuario (pgAdmin)
+    participant DB as PostgreSQL
+    participant WAL as WAL Log
+    participant DISK as Disco
+
+    Note over U,DISK: TRANSACCION T1 - EXITOSA
+    U->>DB: BEGIN
+    DB->>WAL: Registra BEGIN
+    U->>DB: UPDATE stock = 97
+    DB->>WAL: Registra UPDATE (antes:100, despues:97)
+    U->>DB: COMMIT
+    DB->>WAL: Registra COMMIT + fsync
+    Note over WAL: ✅ T1 confirmada en WAL
+
+    Note over U,DISK: TRANSACCION T2 - FALLO SIMULADO
+    U->>DB: BEGIN
+    DB->>WAL: Registra BEGIN T2
+    U->>DB: UPDATE stock = 94
+    DB->>WAL: Registra UPDATE (antes:97, despues:94)
+    Note over DB: Cambio solo en memoria
+    
+    rect rgb(255, 200, 200)
+        Note over U,DISK: ⚡ FALLO SIMULADO (ROLLBACK) ⚡
+    end
+    
+    U->>DB: ROLLBACK
+    DB->>DB: UNDO: Revierte stock = 97
+    Note over DB: ✅ Estado consistente restaurado
+        </div>
+    </div>
+
+    <h2>Diagrama de Checkpoint</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+flowchart LR
+    subgraph MEMORIA["Memoria (Shared Buffers)"]
+        A["Pagina Producto<br/>stock=82<br/>🔴 DIRTY"]
+        B["Pagina Pedido<br/>nuevos registros<br/>🔴 DIRTY"]
+    end
+    
+    subgraph WAL_FILES["WAL Files"]
+        C[Segmento 001]
+        D[Segmento 002]
+    end
+    
+    subgraph DISCO["Data Files"]
+        E["Producto.dat<br/>⚠️ Desactualizado"]
+        F[Pedido.dat]
+    end
+    
+    A -->|"CHECKPOINT"| E
+    B -->|"CHECKPOINT"| F
+    
+    G["checkpoint_timeout<br/>5 min"] -->|Trigger| H{"🔄 CHECKPOINT"}
+    I["max_wal_size<br/>1GB"] -->|Trigger| H
+    J["Manual"] -->|Trigger| H
+    
+    H --> K[Escribe dirty pages]
+    K --> L[Actualiza LSN]
+    L --> M[Recicla WAL antiguos]
+
+    style A fill:#FFB6C1
+    style B fill:#FFB6C1
+    style H fill:#90EE90
+        </div>
+    </div>
+
+    <h2>Flujo PITR (Point-In-Time Recovery)</h2>
+    <div class="diagram-container">
+        <div class="mermaid">
+flowchart TD
+    subgraph FALLO["Estado tras Fallo"]
+        A["❌ Base de datos<br/>CORRUPTA"]
+    end
+    
+    subgraph BACKUP["Recursos Disponibles"]
+        B["💾 Backup Base<br/>Domingo 02:00"]
+        C["📋 WAL Archivados<br/>Lun-Sab"]
+    end
+    
+    subgraph RECOVERY["Proceso PITR"]
+        D["1️⃣ Detener PostgreSQL"]
+        E["2️⃣ Respaldar corruptos"]
+        F["3️⃣ Restaurar backup base"]
+        G["4️⃣ Crear recovery.signal"]
+        H["5️⃣ Configurar target_time"]
+        I["6️⃣ Iniciar PostgreSQL"]
+        J["7️⃣ Replay WAL"]
+    end
+    
+    subgraph RESULTADO["Resultado"]
+        K["✅ Base restaurada<br/>a momento específico"]
+    end
+    
+    A --> D
+    D --> E --> F
+    B --> F
+    F --> G --> H
+    C --> H
+    H --> I --> J --> K
+    
+    style A fill:#FFB6C1
+    style K fill:#90EE90
+        </div>
+    </div>
+
+    <h2>Detalle de Capturas Clave</h2>
+
+    <div class="captura-box">
+        <strong>CAPTURA 04a y 04b - Simulación UNDO (La más importante)</strong><br><br>
+        Esta es la captura que demuestra el concepto de recuperación:
+        <ol>
+            <li>Ejecutar BEGIN + UPDATE (stock pasa de 97 a 94)</li>
+            <li><strong>CAPTURA 04a:</strong> Mostrar stock = 94 (cambio NO confirmado)</li>
+            <li>Ejecutar ROLLBACK (simula el UNDO automático tras fallo)</li>
+            <li><strong>CAPTURA 04b:</strong> Mostrar stock = 97 (valor restaurado)</li>
+        </ol>
+        Esto demuestra cómo PostgreSQL deshace cambios de transacciones no confirmadas.
+    </div>
+
+    <div class="warning-box">
+        <strong>Nota sobre la simulación:</strong><br>
+        En un fallo real del sistema, PostgreSQL ejecutaría automáticamente las operaciones UNDO 
+        durante el proceso de recuperación al reiniciar. Nosotros simulamos esto con ROLLBACK 
+        para demostrar el concepto sin necesidad de apagar el servidor.
+    </div>
+
+    <h2>Comandos SQL Esenciales</h2>
+    
+    <h3>Verificar configuración WAL</h3>
+    <pre>SELECT name, setting FROM pg_settings 
+WHERE name IN ('wal_level', 'checkpoint_timeout', 'max_wal_size');</pre>
+
+    <h3>Ver posición actual en WAL</h3>
+    <pre>SELECT pg_current_wal_lsn() AS posicion_wal;</pre>
+
+    <h3>Información del último checkpoint</h3>
+    <pre>SELECT checkpoint_lsn, checkpoint_time FROM pg_control_checkpoint();</pre>
+
+    <h3>Forzar checkpoint manual</h3>
+    <pre>CHECKPOINT;</pre>
+
+    <h3>Simular transacción con fallo</h3>
+    <pre>BEGIN;
+UPDATE Producto SET stock = 94 WHERE id_producto = 1;
+-- Ver estado: SELECT stock FROM Producto WHERE id_producto = 1;
+ROLLBACK;  -- Simula UNDO automático
+-- Verificar restauración: SELECT stock FROM Producto WHERE id_producto = 1;</pre>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>
